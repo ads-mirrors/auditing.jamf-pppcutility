@@ -7,14 +7,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ## [Unreleased]
 <!-- Add any information here about changes in master that have yet to be released -->
 
+## [2.0.0] - 2026-05-26
+
 ### Added
+- Three new PPPC service keys: `BluetoothAlways`, `SystemPolicyAppBundles`, and `SystemPolicyAppData` ([PR #151](https://github.com/jamf/PPPC-Utility/pull/151))
 - Connection to Jamf Pro can now use client credentials with Jamf Pro v10.49+ ([Issue #120](https://github.com/jamf/PPPC-Utility/issues/120)) [@macblazer](https://github.com/macblazer).
 
 ### Changed
-- Update print and os_log calls to the modern OSLog class calls for updated logging. ([Issue #112](https://github.com/jamf/PPPC-Utility/issues/112)) [@SkylerGodfrey](https://github.com/SkylerGodfrey)
-- Now using [Haversack](https://github.com/jamf/Haversack) for simplified access to the keychain ([Issue #124](https://github.com/jamf/PPPC-Utility/issues/124)) [@macblazer](https://github.com/macblazer).
-- PPPC Utility now requires macOS 13+ to run.  It can still produce profiles usable on older versions of macOS.
-- Removed Big Sur compatibility toggle and legacy `Allowed` key support.  The `Authorization` key is now always used.
+- Now requires macOS 13+. Profiles produced by the app remain compatible with older macOS versions.
+- Removed the Big Sur compatibility toggle and legacy `Allowed` key support. The `Authorization` key is now always used ([PR #135](https://github.com/jamf/PPPC-Utility/pull/135))
+- Updated to Swift 6 language mode ([PR #150](https://github.com/jamf/PPPC-Utility/pull/150))
+- Now using [Haversack](https://github.com/jamf/Haversack) for keychain access ([Issue #124](https://github.com/jamf/PPPC-Utility/issues/124)) [@macblazer](https://github.com/macblazer).
+- Updated logging to use the modern `OSLog` API ([Issue #112](https://github.com/jamf/PPPC-Utility/issues/112)) [@SkylerGodfrey](https://github.com/SkylerGodfrey)
 
 ## [1.5.0] - 2022-10-04
 
@@ -104,7 +108,8 @@ Initial release [@cyrusingraham](https://github.com/cyrusingraham).
 
 <!--  -->
 
-[unreleased]: https://github.com/jamf/PPPC-Utility/compare/1.5.0...master
+[unreleased]: https://github.com/jamf/PPPC-Utility/compare/2.0.0...master
+[2.0.0]: https://github.com/jamf/PPPC-Utility/compare/1.5.0...2.0.0
 [1.5.0]: https://github.com/jamf/PPPC-Utility/compare/1.4.0...1.5.0
 [1.4.0]: https://github.com/jamf/PPPC-Utility/compare/1.3.0...1.4.0
 [1.3.0]: https://github.com/jamf/PPPC-Utility/compare/1.2.1...1.3.0
